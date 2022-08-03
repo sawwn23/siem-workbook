@@ -1,3 +1,17 @@
-# Shipping Linux Logs With ElasticAgent
+# Install elasic agent
 
-1. Install elastic agent
+1. Navigate to `Elastic Management` app by clicking on the side on the side navigation menu and scrolling down to the `Management` section and clicking on `Fleet`.
+
+2. Navigate to `Agent` tab.
+
+3. Click `Add Agent` and choose agent policy name.
+
+4. Download and install elastic-agent with Linux Tar.
+
+```jsx
+// type in command prompt
+# curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.3.3-linux-x86_64.tar.gz
+# tar xzvf elastic-agent-8.3.3-linux-x86_64.tar.gz
+# cd elastic-agent-8.3.3-linux-x86_64
+# sudo ./elastic-agent install --url=FLEET-HOST-URL --enrollment-token=ENROLLMENT-TOKEN
+```

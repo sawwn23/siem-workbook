@@ -1,18 +1,28 @@
+import Bleed from 'nextra-theme-docs/bleed'
+
 # Explore and Understand Overview Tab
 
-1. Navigate to Elastic Security app by clicking on the side navigation menu and scrolling down to the Security section and clicking on "Overview".
+1. Navigate to Elastic Security app by clicking on the side navigation menu and scrolling down to the Security section and clicking on **Overview**.
+
+<Bleed>![SIEM UI](../../public/siemui.png)</Bleed>
 
 2. We have populated this instance with some honeypot data for your to explore the app. However, the data is historical. Please use the time filter on the top right to set the timeframe to Mar 11, 2020 @ 20:00:00.0 → Mar 12, 2020 @ 20:00:00.0.
 
+<Bleed>![Time Filter](../../public/siem-tsfilter.png)</Bleed>
+
 3. Take some time to get familiar with the contents of this tab. Explore both the host and network events sections. Explore and understand UI controls in Hosts tab
 
-4. Navigate to the “Hosts” tab and explore visualizations. Visualizations with a time axis are interactive. Click and drag on portion of the time period to zone in. Observe the time filter on top changing accordingly.
+4. Navigate to the **Hosts** tab and explore visualizations. Visualizations with a time axis are interactive. Click and drag on portion of the time period to zone in. Observe the time filter on top changing accordingly.
+
+<Bleed>![Host UI](../../public/siem-host.png)</Bleed>
 
 5. You can reset the time filter to 2020 @ 20:00:00.0 → Mar 12, 2020 @ 20:00:00.0 by picking it from under recently used date ranges section of the time filter.
 
-6. Scroll down to the “All hosts” table and try dragging one of the hosts by its Host name and drop it into the timeline.
+6. Scroll down to the “All hosts” table and clicking add to timeline on one hostname.
 
 7. Expand the timeline and notice the newly added filter in the drop area. Try adding more criteria on to the drop zone both right next (horizontally) to the existing filter and below to combine them with and AND or OR logic.
+
+<Bleed>![TimeLine](../../public/siem-timeline.png)</Bleed>
 
 8. Collapse the existing timeline by clicking on the X
 
@@ -20,16 +30,6 @@
 
 10. Scroll up to the top and notice the new filter that has the label "Not event.outcome: failure" Now click the filter and click on "Include results". This should invert the filter and show counts for “authentication_failure” alone.
 
-11. Try clicking on a field such as “Last failed source” that has a hyperlink to drill down on it.
+11. Click back on the Hosts tab and delete the filter with the label "Not event.outcome: failure". Let’s now explore the “Uncommon processes” subtab. The functionalities offered by individual elements are pretty much the same.
 
-12. If you clicked on an IP address, you’d be taken to the network tab which will furnish information about the IP. Feel free to checkout virustotal.com and talosintelligence.com links to checkout reputation information for the IP.
-
-13. Click back on the Hosts tab and delete the filter with the label "Not event.outcome: failure". Let’s now explore the “Uncommon processes” subtab. The functionalities offered by individual elements are pretty much the same.
-
-14. Finally click on the “Events” tab. The histogram works similar to the one found in the authentications tab. You can use the crosshair to zone in on a timeframe and click on the legends to filter out categories.
-
-15. Scroll down to the events table and expand on a row and explore the contents of the row in both table and json format. While exploring it JSON View, notice the hierarchical structure of the document.
-
-16. Switch back to the Table View and use the “Filter by Field, Value, or Description” type ahead field to search for “outcome” and observe the event.outcomen field and the value in it. Use the checkbox to toggle the column to be shown in the table.
-
-17. Click on the customize column icon that is to the left of the @timestamp column header of the table. Feel free to play around rearranging columns, toggling them on or off and when done click reset fields to the top right to reset it back if you’d like to restore defaults.
+12. Finally click on the “Events” tab. The histogram works similar to the one found in the authentications tab. You can use the crosshair to zone in on a timeframe and click on the legends to filter out categories.

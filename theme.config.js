@@ -63,7 +63,7 @@ export default {
   prevLinks: true,
   nextLinks: true,
   footer: true,
-  footerEditLink: 'Edit this page on GitHub',
+  // footerEditLink: 'Edit this page on GitHub',
   footerText: <>{new Date().getFullYear()} © Kernellix.</>,
-  unstable_faviconGlyph: '👋',
+  // unstable_faviconGlyph: '👋',
 }
